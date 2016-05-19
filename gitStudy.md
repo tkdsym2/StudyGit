@@ -1,4 +1,4 @@
-# ***Github講習会***
+# ***NCC Github講習会***
 
 ---
 
@@ -10,8 +10,25 @@
 
 ---
 
-## **BitBucketと何が違うねん**
-~~うるさい~~
+## **他のGit Hosting Serviceと何が違うねん**
+### **Github**
+ -  Free Accountで無限に **Public Repository** を作れる. **Private Repository** を作るには別のPlanにする必要がある.
+ - HTTPS, SSH
+ - Wiki, Gist
+ - pull request
+ - member人数制限なし   
+
+### **BitBucket**
+ - 大体Githubと同じ.
+ - Free PlanでPublicとPrivateの **両方の** Repositoryが無制限に作れる.  
+ - memberはFree Planだと5人まで
+ - Gistはない  
+
+### **GitLab**
+ - 大体Githubと同じ.
+ -  Public, Privateの **両方の** Repositoryを無制限に作れる.  
+ - Member 無制限
+ - Wikiなし  
 
 
 ---
@@ -55,7 +72,7 @@
 
 ---
 ## **Githubの流れ(Local編)**
-### Gitを使ってLocalで管理する場合です.  
+### Gitを使ってLocalで管理する場合です. (多分実演する)
  3. codeの変更やFileの追加をしたら, とりあえず `git add .` を打つ
  3. 何を変更したか, 追加したかを明記するために `git commit -m "initial commit"` を打つ. initial commitと記述されている部分に自分のコメントを打つ.
  3. add -> commitをすると, codeやFileの変更が適用されて保存される.  

@@ -53,28 +53,31 @@
 ### GUI(Github for DesktopやSource Tree)を使う場合(以下GUIで統一)
  ここは後で.
 
-### その後は?  
-コードを更新したら `git add .` や `git add index.html` などする.   
-その後, 何を更新したかを表示するために `git commit -m "initial commit"` などとする.  
-そうすればGithub上で何がどのように更新されてるのがわかる(後ほど画像挿入).  
-**Branch** というものがある.  最初自分たちが
-
 ---
 ## **Githubの流れ(Local編)**
 Gitを使ってLocalで管理する場合です.  
+ 3. codeの変更やFileの追加をしたら, とりあえず `git add .` を打つ
+ 3. 何を変更したか, 追加したかを明記するために `git commit -m "initial commit"` を打つ. initial commitと記述されている部分に自分のコメントを打つ.
+ 3. add -> commitをすると, codeやFileの変更が適用されて保存される.  
+ 3. これを, remoteのrepository, つまりGithubにあげることができるようになる.
+ 3. Githubにcodeを送る時は, `git push origin master` と打つと, Remote Repositoryも変更が適用される.  
+ 3. もし, いくつかの形式で管理をしたい場合は **Branch** というものを使って, 管理をする.
+ 3. 元は **master** とうBranchにいるが,  `git branch hoge` と打つと, masterではなく, hogeというbranchでcodeなどの管理が別途行われる.
+ 3. もし, 別のbranchで作業したい時は, `git checkout hoge` で現在のbranchからhogeというbranchに移動する. `git branch` のみを打つと, どのようなbranchがあるかを見ることができる.  
+ 3. masterではなく別のbranchにいる状態で, `git push origin master` とやっても, Remote Repositoryの **master** branchに変更が適用されてしまうので, `git push origin hoge` などのように, branchを指定する. そうすると, Remote Repositoryにも **hoge** branchが作成されて, 別途管理ができるようになる.  
 
 
 ---
 
 ## **Githubの流れ(Remote編)**  
 基本的に用語が多いので, 流れに沿ってGithubを使用しながらその都度説明します.  
-
- 3. **Issue** :  Issueはプログラム上のバグのような問題がある場合などに飛んできたり飛ばしたりします.
+**ここはあとでやります**
+ 4. **Issue** :  Issueはプログラム上のバグのような問題がある場合などに飛んできたり飛ばしたりします.
   - Issueが飛んできます(画像挿入)
   - Issueが解決したと思ったら返信します(画像挿入)
   - 問題は解決したので, Issueを閉じます(画像挿入)
 
- 3. **Pull Request**
+ 4. **Pull Request**
   -    
   -   
   -  

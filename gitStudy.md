@@ -1,3 +1,5 @@
+# Githubのpageの見方や機能の説明を付け足す責務
+
 # ***NCC Github講習会***
 
 ---
@@ -16,6 +18,7 @@
  - HTTPS, SSH
  - Wiki, Gist
  - pull request
+ - 自分のweb pageを公開できる(ドメインを用意してくれる)
  - member人数制限なし   
 
 ### **BitBucket**
@@ -72,7 +75,7 @@
 
 ---
 ## **Githubの流れ(Local編)**
-### Gitを使ってLocalで管理する場合です. (多分実演する)
+### Gitを使ってLocalで管理する場合. (多分実演する)
  3. codeの変更やFileの追加をしたら, とりあえず `git add .` を打つ
  3. 何を変更したか, 追加したかを明記するために `git commit -m "initial commit"` を打つ. initial commitと記述されている部分に自分のコメントを打つ.
  3. add -> commitをすると, codeやFileの変更が適用されて保存される.  
@@ -80,20 +83,78 @@
  3. Githubにcodeを送る時は, `git push origin master` と打つと, Remote Repositoryも変更が適用される.  
  3. もし, いくつかの形式で管理をしたい場合は **Branch** というものを使って, 管理をする.
  3. 元は **master** とうBranchにいるが,  `git branch hoge` と打つと, masterではなく, hogeというbranchでcodeなどの管理が別途行われる.  
- ![branch first](https://gyazo.com/a756262bdd686f230df5c32e0a8dce14.jpg)
+ ```
+$git branch hogehoge
+$git branch
+       hogehoge
+       *master
+ ```
  3. もし, 別のbranchで作業したい時は, `git checkout hoge` で現在のbranchからhogeというbranchに移動する. `git branch` のみを打つと, どのようなbranchがあるかを見ることができる.  
- ![branch change](https://gyazo.com/bfc1d125f426477a3d062b2eb0f2e154.jpg)
+ ```
+$git branch hogehoge
+$git branch
+       hogehoge
+       *master
+$git checkout hogehoge
+Switched to branch 'hogehoge'
+$git branch
+       *hogehoge
+       master
+ ```  
  3. masterではなく別のbranchにいる状態で, `git push origin master` とやっても, Remote Repositoryの **master** branchに変更が適用されてしまうので, `git push origin hoge` などのように, branchを指定する. そうすると, Remote Repositoryにも **hoge** branchが作成されて, 別途管理ができるようになる.  
-   ![branch push](https://gyazo.com/b49e5c1c10cb2fc636d94d63033bb0ca.jpg)  
-   ![GUI brach1](https://gyazo.com/b7c77c884dea50760b96d7a5010a42b8.jpg)  ![GUI branch2](https://gyazo.com/2734ab6ff55bc2332842aaba6baa1801.jpg)
+ ```
+ $git push origin hogehoge
+ Total 0 (data0), reused 0 (delta 0)
+ To git@github.com:fmsuvM/hugahuga.git
+  * [new branch] hogehoge -> hogehoge
+ ```
+ ![GUI brach1](https://gyazo.com/b7c77c884dea50760b96d7a5010a42b8.jpg)  
+ ![GUI branch2](https://gyazo.com/2734ab6ff55bc2332842aaba6baa1801.jpg)
 
-### 画像で追う流れ
+### codeで追う流れ
  - 最初  
- ![code before](https://gyazo.com/a925f28d70f4cff277cb06768a396c2d.jpg)
- - 変更後(少し増えた) ![code after](https://gyazo.com/128e255ba0f2e35757340c604c56dbbe.jpg)
- - 更新されてない ![no change](https://gyazo.com/a64ed049f2237c0c2f14582994e34bb2.jpg)
- - 更新する  
- ![change](https://gyazo.com/f62a2882a4897c77a62ab8243679226a.jpg)
+ ```
+ var electron = require('electron');
+ var app = electron.app;
+ var BrowserWindow = electron.BrowserWindow;
+
+ var mainWindow = null;
+ ```
+
+ - 変更後(少し変わった)
+ ```
+ let electron = require('electron')
+ let app = electron.app
+ let BrowserWindow = electron.BrowserWindow
+
+ let mainWindow = null
+ ```
+
+ - `git status` を打って確認すると, 更新されてない
+ ```
+ $git status
+ On branch master
+ Your branch is ahead of 'origin/master' by 2 commits.
+ (use "git push" to publish your local commits)
+ Changes not staged for commit:
+ (use "git add <file>..." to update what will be committed)
+ (use "git checkout --<file>..." to discord changes in working directory)
+       modified: index.js
+ no changes added to commit (use "git add" and/or "git commit -a")
+ ```
+
+ - `git add .` と `git commit -m "message"` を使って更新する  
+ ```
+ $git add .
+ $git commit -m "change import method"
+ [master e938284] change import method
+ 1 file changed, 1 deletion(-)
+ $git status
+ On branch master
+ Your branch is ahead of 'origin/master' by 3 commits.
+ (use "git push" to publish your local commits)
+ nothing to commit, working directory clean
+ ```
  - `git log` で今までのcommit messageや日時を確認可能 ![log](https://gyazo.com/732079fba6a266e2db4ffb844b3f022d.jpg)
 
 ---
@@ -102,19 +163,22 @@
 基本的に用語が多いので, 流れに沿ってGithubを使用しながらその都度説明します.  
 **ここはあとでやります**  
 
-### Pull
+### **Clone**
+Github上にあるRepositoryを複製して, Local(自分のパソコン)のRepositoryを作ること.  
 
+### **Pull**
+Github上のRemote RepositoryからCommit(そのRepositoryの更新)をinstallして, Local Repositoryに反映させること.
 
-### Issue
- Issueはプログラム上のバグのような問題がある場合などに飛んできたり飛ばしたりします.
-  - Issueが飛んできます(画像挿入)
-  - Issueが解決したと思ったら返信します(画像挿入)
-  - 問題は解決したので, Issueを閉じます(画像挿入)
+### **Fork**  
+自分のRemote Repositoryに他の人のRemote Repositoryをコピーすること. これで自分ではない人のRepositoryを編集できる.  
 
-### Pull Request
-  -    
-  -   
-  -  
+### **Issue**
+Issueはプログラム上のバグのような問題がある場合などに飛んできたり飛ばしたりする.
+
+### **Pull Request**  
+Pull Requestとは, RepositoryのSource Codeなどの修正などをOwnerに送信するシステム. 主にチーム開発をしている時などに使う.
+  - チーム開発のRepositoryを自分のRepositoryとしてForkしてから, Pull Request
+  - チーム開発のRepositoryでbranchを作成してから, Pull Request(今回はこっち)
 
 
 

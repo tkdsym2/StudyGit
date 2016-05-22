@@ -79,10 +79,13 @@
  3. これを, remoteのrepository, つまりGithubにあげることができるようになる.
  3. Githubにcodeを送る時は, `git push origin master` と打つと, Remote Repositoryも変更が適用される.  
  3. もし, いくつかの形式で管理をしたい場合は **Branch** というものを使って, 管理をする.
- 3. 元は **master** とうBranchにいるが,  `git branch hoge` と打つと, masterではなく, hogeというbranchでcodeなどの管理が別途行われる. ![branch first](https://gyazo.com/a756262bdd686f230df5c32e0a8dce14.jpg)
+ 3. 元は **master** とうBranchにいるが,  `git branch hoge` と打つと, masterではなく, hogeというbranchでcodeなどの管理が別途行われる.  
+ ![branch first](https://gyazo.com/a756262bdd686f230df5c32e0a8dce14.jpg)
  3. もし, 別のbranchで作業したい時は, `git checkout hoge` で現在のbranchからhogeというbranchに移動する. `git branch` のみを打つと, どのようなbranchがあるかを見ることができる.  
  ![branch change](https://gyazo.com/bfc1d125f426477a3d062b2eb0f2e154.jpg)
- 3. masterではなく別のbranchにいる状態で, `git push origin master` とやっても, Remote Repositoryの **master** branchに変更が適用されてしまうので, `git push origin hoge` などのように, branchを指定する. そうすると, Remote Repositoryにも **hoge** branchが作成されて, 別途管理ができるようになる.  ![branch push](https://gyazo.com/b49e5c1c10cb2fc636d94d63033bb0ca.jpg) ![GUI brach1](https://gyazo.com/b7c77c884dea50760b96d7a5010a42b8.jpg)  ![GUI branch2](https://gyazo.com/2734ab6ff55bc2332842aaba6baa1801.jpg)
+ 3. masterではなく別のbranchにいる状態で, `git push origin master` とやっても, Remote Repositoryの **master** branchに変更が適用されてしまうので, `git push origin hoge` などのように, branchを指定する. そうすると, Remote Repositoryにも **hoge** branchが作成されて, 別途管理ができるようになる.  
+   ![branch push](https://gyazo.com/b49e5c1c10cb2fc636d94d63033bb0ca.jpg)  
+   ![GUI brach1](https://gyazo.com/b7c77c884dea50760b96d7a5010a42b8.jpg)  ![GUI branch2](https://gyazo.com/2734ab6ff55bc2332842aaba6baa1801.jpg)
 
 ### 画像で追う流れ
  - 最初  
@@ -97,13 +100,18 @@
 
 ## **Githubの流れ(Remote編)**  
 基本的に用語が多いので, 流れに沿ってGithubを使用しながらその都度説明します.  
-**ここはあとでやります**
- 4. **Issue** :  Issueはプログラム上のバグのような問題がある場合などに飛んできたり飛ばしたりします.
+**ここはあとでやります**  
+
+### Pull
+
+
+### Issue
+ Issueはプログラム上のバグのような問題がある場合などに飛んできたり飛ばしたりします.
   - Issueが飛んできます(画像挿入)
   - Issueが解決したと思ったら返信します(画像挿入)
   - 問題は解決したので, Issueを閉じます(画像挿入)
 
- 4. **Pull Request**
+### Pull Request
   -    
   -   
   -  

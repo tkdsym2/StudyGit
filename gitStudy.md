@@ -83,40 +83,45 @@
  3. Githubにcodeを送る時は, `git push origin master` と打つと, Remote Repositoryも変更が適用される.  
  3. もし, いくつかの形式で管理をしたい場合は **Branch** というものを使って, 管理をする.
  3. 元は **master** とうBranchにいるが,  `git branch hoge` と打つと, masterではなく, hogeというbranchでcodeなどの管理が別途行われる.  
+
  ```
-$git branch hogehoge
-$git branch
+ $git branch hogehoge
+ $git branch
        hogehoge
        *master
- ```
+ ```  
+
  3. もし, 別のbranchで作業したい時は, `git checkout hoge` で現在のbranchからhogeというbranchに移動する. `git branch` のみを打つと, どのようなbranchがあるかを見ることができる.  
+
  ```
-$git branch hogehoge
-$git branch
+ $git branch hogehoge
+ $git branch
        hogehoge
        *master
-$git checkout hogehoge
-Switched to branch 'hogehoge'
-$git branch
+ $git checkout hogehoge
+ Switched to branch 'hogehoge'
+ $git branch
        *hogehoge
        master
  ```  
+
  3. masterではなく別のbranchにいる状態で, `git push origin master` とやっても, Remote Repositoryの **master** branchに変更が適用されてしまうので, `git push origin hoge` などのように, branchを指定する. そうすると, Remote Repositoryにも **hoge** branchが作成されて, 別途管理ができるようになる.  
+
  ```
  $git push origin hogehoge
  Total 0 (data0), reused 0 (delta 0)
  To git@github.com:fmsuvM/hugahuga.git
   * [new branch] hogehoge -> hogehoge
  ```
+ 
  ![GUI brach1](https://gyazo.com/b7c77c884dea50760b96d7a5010a42b8.jpg)  
  ![GUI branch2](https://gyazo.com/2734ab6ff55bc2332842aaba6baa1801.jpg)
 
 ### codeで追う流れ
  - 最初  
  ```
- var electron = require('electron');
- var app = electron.app;
- var BrowserWindow = electron.BrowserWindow;
+ var app = require('app');
+ var BrowserWindow = require('BrowserWindow');
 
  var mainWindow = null;
  ```

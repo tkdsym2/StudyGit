@@ -32,35 +32,40 @@
 ---
 
 ## **GitHubでコード管理 ~入門~**  
-### CUI(terminalやcommand prompt)の場合(以下terminalで統一)   
- 2. terminalでとりあえず `git --version` を打ち込んで入ってるか確認  
-  - errorでたら教えてください  
 
- 2. GitHubの自分のPage([例](https://github.com/fmsuvM?tab=repositories))で, New RepositoryをClickします  
- 2. こんな感じの画面になります  
+## **新しいRepositoryを作る(GUI編)**
+
+
+
+
+### **新しいRepositoryを作る(CUI編)**    
+2. terminalでとりあえず `git --version` を打ち込んで入ってるか確認  
+ - errorでたら言ってください  
+ 2. GitHubの自分のPage([例](https://github.com/fmsuvM?tab=repositories))で, New RepositoryをClickする  
+ 2. こんな感じの画面になる  
 
  ![First Image](https://gyazo.com/579b371b8f6021b72a15f0240de63aec.jpg)  
 
- 2. Repository NameとDescriptionを入力します  
+ 2. Repository NameとDescriptionを入力  
 
   ![SecondImage](https://gyazo.com/dfb95f0d3fdcd1dffd168182ccdd3ad6.jpg)  
 
- 2. こんな感じの画面が出ます  
+ 2. こんな感じの画面が出る  
 
   ![ThirdImage](https://gyazo.com/4f32aed5aac2b1171a5b8343270889c5.jpg)  
 
- 2. 2種類のcommandがありますが, どちらでも構わないのでコピペします.   
-  - 上のcommandはcurrent directoryで実行するだけでREADME.md(説明書のようなもの)も一緒に作ってくれます.
-  - 下のcommandは自分でcurrent directoryでまず `git init` しなければなりません. その後に別途自分でREADME.mdも作成する必要があります.  
- 2. これで自分の書いたcodeがGitHub上に初めてuploadされます.  
+ 2. 2種類のcommandがあるが, どちらでも構わないのでコピペする.   
+  - 上のcommandはcurrent directoryで実行するだけでREADME.md(説明書のようなもの)も一緒に作ってくれる.
+  - 下のcommandは自分でcurrent directoryでまず `git init` しなければならない. その後に別途自分でREADME.mdも作成する必要がある.  
+ 2. これで自分の書いたcodeがGitHub上に初めてuploadされる.  
 
+
+
+## コード管理
 ### GUI(GitHub for DesktopやSource Tree)を使う場合(以下GUIで統一)
  ここは後で.
 
-
-## **GitHubの使い方(addしてcommitしてpushするまで)**
-
-### CUIで管理する場合(多分実演する)
+### CUI(terminalやcommand prompt)で管理する場合(以下terminalで統一)
  3. コードの変更やFileの追加をしたら, とりあえず `git add .` を打つ
  3. 何を変更したか, 追加したかを明記するために `git commit -m "initial commit"` を打つ. initial commitと記述されている部分に自分のコメントを打つ.
  3. add -> commitをすると, codeやFileの変更が適用されて保存される.  
@@ -210,4 +215,9 @@ Pull Requestとは, RepositoryのSource Codeなどの修正などをOwnerに送�
  -  Public, Privateの **両方の** Repositoryを無制限に作れる.  
  - Member 無制限
  - Wikiなし
- - 最新のGitLab(または, gitlab.comにてホスティングされているもの)には, Wiki機能がついている[(参考)](https://github.com/fmsuvM/GitStudy/blob/tkd/gitStudy.md#gitlab)
+ - 最新のGitLab(または, gitlab.comにてホスティングされているもの)には, Wiki機能がついている[(参考)](https://github.com/fmsuvM/GitStudy/blob/tkd/gitStudy.md#gitlab)  
+
+
+## **参考にしたサイト**
+ [サルでもわかるgit入門](http://www.backlog.jp/git-guide/)  
+ [onsen-2015-summer-textbook](https://github.com/post-internet/onsen-2015-summer-textbook/tree/master/001_mactkg)

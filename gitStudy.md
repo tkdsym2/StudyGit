@@ -165,7 +165,8 @@
  (use "git push" to publish your local commits)
  nothing to commit, working directory clean
  ```
- - `git log` で今までのcommit messageや日時を確認可能 ![log](https://gyazo.com/732079fba6a266e2db4ffb844b3f022d.jpg)  
+ - `git log` で今までのcommit messageや日時を確認可能  
+ ![log](https://gyazo.com/732079fba6a266e2db4ffb844b3f022d.jpg)  
 
 
 ### GUIで管理する場合(Github for Desktop)
@@ -178,10 +179,22 @@
 **ここはあとでやります**  
 
 ### **clone**
-Github上にあるRepositoryを複製して, Local(自分のパソコン)のRepositoryを作ること.  
-`git clone <URL>`
+Github上にあるRepositoryを複製して, Local(自分のパソコン)のRepositoryを作る.  
+`git clone <Repository URL>`
+
+### **fetch**
+Github上のRemote RepositoryからLocal Repositoryに最新の状態を反映させる.  
+pullのようにファイルが更新されるわけではない.  
+`git fetch`
+
+### **merge**
+LocalのFileを更新して, Commitするとbranchはmasterに入る. Localの作業Directoryはmaster branchと結びついている.  
+origin/masterというbranchはGithubのRepositoryと結びついているbranch. `git fetch` をすると, **origin/master** が更新される.  
+これだとmaster branchは **更新されていない** ので `git merge origin/master` をする.  
+こうすると, origin/masterの変更が, masterにも反映される. **master <- origin/master**
 
 ### **pull**
+fetchとmergeを合体させたようなもの.  
 Github上のRemote RepositoryからCommit(そのRepositoryの更新)をinstallして, Local Repositoryに反映させること.
 
 ### **fork**  

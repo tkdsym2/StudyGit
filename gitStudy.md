@@ -47,7 +47,12 @@
 
 ---
 
-## **Github入門**  
+## GithubのPage画面の見方
+ここも後で
+
+---
+
+## **GithubでCode管理 ~入門~**  
 ### CUI(terminalやcommand prompt)の場合(以下terminalで統一)   
  2. terminalでとりあえず `git --version` を打ち込んで入ってるか確認  
   - errorでたら教えてください  
@@ -74,14 +79,14 @@
  ここは後で.
 
 ---
-## **Githubの流れ(Local編)**
-### Gitを使ってLocalで管理する場合. (多分実演する)
+## **Githubの使い方(Local編)**
+### CUIで管理する場合(多分実演する)
  3. codeの変更やFileの追加をしたら, とりあえず `git add .` を打つ
  3. 何を変更したか, 追加したかを明記するために `git commit -m "initial commit"` を打つ. initial commitと記述されている部分に自分のコメントを打つ.
  3. add -> commitをすると, codeやFileの変更が適用されて保存される.  
  3. これを, remoteのrepository, つまりGithubにあげることができるようになる.
  3. Githubにcodeを送る時は, `git push origin master` と打つと, Remote Repositoryも変更が適用される.  
- 3. もし, いくつかの形式で管理をしたい場合は **Branch** というものを使って, 管理をする.
+ 3. (ここは次回?)もし, いくつかの形式で管理をしたい場合は **Branch** というものを使って, 管理をする.
  3. 元は **master** とうBranchにいるが,  `git branch hoge` と打つと, masterではなく, hogeというbranchでcodeなどの管理が別途行われる.  
 
  ```
@@ -113,11 +118,11 @@
  To git@github.com:fmsuvM/hugahuga.git
   * [new branch] hogehoge -> hogehoge
  ```
- 
+
  ![GUI brach1](https://gyazo.com/b7c77c884dea50760b96d7a5010a42b8.jpg)  
  ![GUI branch2](https://gyazo.com/2734ab6ff55bc2332842aaba6baa1801.jpg)
 
-### codeで追う流れ
+#### codeで追う流れ
  - 最初  
  ```
  var app = require('app');
@@ -160,24 +165,29 @@
  (use "git push" to publish your local commits)
  nothing to commit, working directory clean
  ```
- - `git log` で今までのcommit messageや日時を確認可能 ![log](https://gyazo.com/732079fba6a266e2db4ffb844b3f022d.jpg)
+ - `git log` で今までのcommit messageや日時を確認可能 ![log](https://gyazo.com/732079fba6a266e2db4ffb844b3f022d.jpg)  
+
+
+### GUIで管理する場合(Github for Desktop)
+後で
 
 ---
 
-## **Githubの流れ(Remote編)**  
+## **Githubの使い方(Remote編)**  
 基本的に用語が多いので, 流れに沿ってGithubを使用しながらその都度説明します.  
 **ここはあとでやります**  
 
-### **Clone**
+### **clone**
 Github上にあるRepositoryを複製して, Local(自分のパソコン)のRepositoryを作ること.  
+`git clone <URL>`
 
-### **Pull**
+### **pull**
 Github上のRemote RepositoryからCommit(そのRepositoryの更新)をinstallして, Local Repositoryに反映させること.
 
-### **Fork**  
+### **fork**  
 自分のRemote Repositoryに他の人のRemote Repositoryをコピーすること. これで自分ではない人のRepositoryを編集できる.  
 
-### **Issue**
+### **issue**
 Issueはプログラム上のバグのような問題がある場合などに飛んできたり飛ばしたりする.
 
 ### **Pull Request**  

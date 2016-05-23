@@ -210,3 +210,4 @@ Pull Requestとは, RepositoryのSource Codeなどの修正などをOwnerに送�
  -  Public, Privateの **両方の** Repositoryを無制限に作れる.  
  - Member 無制限
  - Wikiなし
+ - 最新のGitLab(または, gitlab.comにてホスティングされているもの)には, Wiki機能がついている[(参考)](https://github.com/fmsuvM/GitStudy/blob/tkd/gitStudy.md#gitlab)

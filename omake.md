@@ -10,7 +10,7 @@
 - pull request
 - 自分のweb pageを公開できる(ドメインを用意してくれる)
 - チームのメンバーは人数制限なし
-
+- 学生だったら無限にprivateリポジトリを作れる. [ここ](https://education.github.com/pack)
 ### **BitBucket**
 
 - 大体GitHubと同じ.

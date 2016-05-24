@@ -26,7 +26,11 @@
 
 
 ### **元からあるファイルを管理する場合**
-後で
+ 1. 画面の左上にある「+」のマークを押して, 「Add」を選択する. GitHubで管理したいファイルを選択して「Create & Add Repository」をクリック.
+ 1. そうすると左のメニューの「Other」一覧に選択して作ったリポジトリが表示される.  
+ 1. ここでまたSummaryとDescriptionにコメントを入力して, 「Commit to master」をクリック.  
+ 1. **Publish** をクリックし, リポジトリ名と説明を入力して **Publish Repository**
+ 1. GitHubにコードが上がる.  
 
 
 ## コード管理(SourceTreeやGitHub Desktop. 今回はGitHub Desktop)

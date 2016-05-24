@@ -98,5 +98,6 @@ Pull Requestとは, リポジトリのコードなどの修正などを作成者
 
 ## **4: 参考にしたサイト**
 
-[サルでもわかるgit入門](http://www.backlog.jp/git-guide/)<br>
+[サルでもわかるgit入門](http://www.backlog.jp/git-guide/)  
+
 [onsen-2015-summer-textbook](https://github.com/post-internet/onsen-2015-summer-textbook/tree/master/001_mactkg)

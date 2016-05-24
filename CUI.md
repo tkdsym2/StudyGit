@@ -2,7 +2,7 @@
 ## **新しいRepositoryを作る(CUI編)**
 
 1. terminalでとりあえず `git --version` を打ち込んで入ってるか確認
-2. エラーでたら言ってください
+2. エラーがでたら言ってください
 3. GitHubの自分のページ([例](https://github.com/fmsuvM?tab=repositories))で, New Repositoryをクリックする
 4. こんな感じの画面になる
 
@@ -23,7 +23,7 @@
 
 8. これで自分の書いたコードがGitHub上に初めてuploadされる.
 
-## コード管理(terminalやcommand prompt, 以下terminalで統一)
+## 概要
 
 1. コードの変更やファイルの追加をしたら, とりあえず `git add .` を打つ
 2. 何を変更したか, 追加したかを明記するために `git commit -m "initial commit"` を打つ. initial commitと記述されている部分に自分のコメントを打つ.
@@ -31,7 +31,7 @@
 4. これを, リモートのリポジトリ, つまりGitHubにあげることができるようになる.
 5. GitHubにコードを送る時は, `git push origin master` と打つと, リモートのリポジトリも変更が適用される.
 
-### コードで追う流れ
+### 例
 
 6. 最初
 
@@ -54,8 +54,8 @@
 
 8. `git status` を打って確認すると, 更新されてない
 
-  ```
-  $git status
+  ```sh
+  $ git status
   On branch master
   Your branch is ahead of 'origin/master' by 2 commits.
   (use "git push" to publish your local commits)
@@ -68,12 +68,12 @@
 
 9. `git add .` と `git commit -m "message"` を使って更新する
 
-  ```
-  $git add .
-  $git commit -m "change import method"
+  ```sh
+  $ git add .
+  $ git commit -m "change import method"
   [master e938284] change import method
   1 file changed, 1 deletion(-)
-  $git status
+  $ git status
   On branch master
   Your branch is ahead of 'origin/master' by 3 commits.
   (use "git push" to publish your local commits)

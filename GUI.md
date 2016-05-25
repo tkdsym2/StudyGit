@@ -47,3 +47,7 @@
  2. 再度, SummaryとDescriptionに入力して「Commit to master」をクリック.  
  2. そして, 右上にある **Sync** をクリック. すると, 以下のようにREADME.mdがリポジトリに追加されている.  
  ![add a readme](https://gyazo.com/51238999421118daebb86fa6f9c10db7.jpg)  
+
+
+## 資料
+(今さら聞けないGitHub)[http://techacademy.jp/magazine/6235]

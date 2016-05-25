@@ -2,7 +2,8 @@
 ## **新しいRepositoryを作る(GUI編)**
 
 ### **新しく作る場合**
- 1. 画面の左上にある「+」のマークを押して, 「Create」を選択する. リポジトリの名前と作る場所を決めて「Create Repository」を押す.  
+ 1. 画面の左上にある「+」のマークを押して, 「Create」を選択する. リポジトリの名前と作る場所を決めて「Create Repository」を押す.   
+ ![plus mark](https://gyazo.com/56a44df1251b4884bd4f6e84a78b1a6e.jpg)  
 
  ![create](https://gyazo.com/70091ab61fd1d8637da82cadbb62a89a.jpg)  
  1. 作成すると, 左側の一覧に新しくリポジトリが作成される.  
@@ -15,7 +16,12 @@
 
  1. 左下にある枠(SummaryとDescription)の中にコメントを入力します(ex: 何を追加したか, 変更したかなど).  
  1. 「Commit to master」をクリックするとGitHubにファイルを上げる **準備** が完了する.  
- 1. ここまで出来たら, 右上にある **Publish** をクリックする. そうするとGitHubで表示されるリポジトリの名前とその説明を入力できるので, 入力して **Publish Repository** をクリック.  
+ 1. ここまで出来たら, 右上にある **Publish** をクリックする.  
+
+ ![publish mark](https://gyazo.com/0ef4518dded3048e6897599ae1a89bbd.jpg)  
+
+ 1. そうするとGitHubで表示されるリポジトリの名前とその説明を入力できるので, 入力して **Publish Repository** をクリック.    
+
  ![publish Repository](https://gyazo.com/e7703d41b1b712fd6fb7759d04664843.jpg)   
 
  1. GitHubに先ほどPublishしたリポジトリがあがった.   
